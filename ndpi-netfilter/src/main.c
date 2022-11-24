@@ -1678,7 +1678,7 @@ ndpi_mt(const struct sk_buff *skb, struct xt_action_param *par)
 			    u_int8_t proto_guessed;
 			    ndpi_protocol p_old = proto;
 			    proto = ndpi_detection_giveup(n->ndpi_struct, flow, 1, &proto_guessed);
-			    if(_DBG_TRACE_DPI)
+			    if(_DBG_TRACE_DPI) {
 			        if( p_old.app_protocol != proto.app_protocol ||
 				    p_old.master_protocol != proto.master_protocol ||
 				    confidence != flow->confidence)
